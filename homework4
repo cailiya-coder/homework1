@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int i,j,n=7,a[8]={},b,m;
+   
+   
+    printf("输入代表学号");
+    while (scanf("%d",&m)==1)
+  
+    {while (m!=0)
+    {
+        i=m%2;
+        a[n--]=i;
+        m=m/2;
+    }
+    for(j=7;j>=1;j--)
+    b+=pow(2,7-j)*a[j];
+    printf("学号信息%d\n",b);
+    
+    if (a[0]==1)
+    printf("性别女\n");
+    
+    else
+    printf("性别男\n");}
+}
