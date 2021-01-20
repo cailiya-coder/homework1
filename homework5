@@ -1,0 +1,11 @@
+#include<iostream>
+#include<iomanip>
+int main()
+{
+  int num[9]={},count;
+  for (int count=0;count<=9;count++)
+  std::cin>>num[count];
+  for (int count=9;count>=0;count--)
+  std::cout<<num[count];
+  return 0;
+}
