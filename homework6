@@ -1,0 +1,35 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void showhomework1()
+    {int i,j;
+
+    for(i=1;i<=9;i++)
+    {for(j=1;j<=i;j++)
+            { cout<<setiosflags(ios::left)<<10*j+5<<"*"<<10*i+5<<"="<<setw(5)<<(10*i+5)*(10*j+5);}
+    cout<<endl;
+    }}
+
+ int showhomework2(int a[9])
+ {int count,temp;
+for (int count=0;count<5;count++)
+{temp=a[count];
+a[count]=a[9-count];
+a[9-count]=temp;
+}
+
+return 0;}
+int main()
+{
+  showhomework1();
+int b [9],k;
+
+for(k=0;k<10;k++)
+std::cin>>b [k];
+
+
+showhomework2(b);
+for(k=0;k<10;k++)
+std::cout<<b [k];}
+
+  
