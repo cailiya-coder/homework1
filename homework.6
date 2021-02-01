@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+     int getInformation(int m,int& c) {
+       int i,j,n=7 ,b,a[8]={};
+    
+     while (m!=0)
+    {
+        i=m%2;
+        a[n--]=i;
+        m=m/2;
+    }
+	       
+			 if (a[0]  == 1)
+        std::cout << "性别女";
+
+    else
+        std::cout<<"性别男";
+		  
+		  
+		   
+		   for(j=7;j>=1;j--)
+   c+=pow(2,7-j)*a[j];
+		   
+	 
+     return (c);	   
+	       
+          
+    }
+
+
+int main() {
+   int m;
+    int d;
+    
+	std::cin>>m;
+   
+	getInformation(m,d);
+   std::cout<<"学号信息" <<d-1;
+    return 0;
+}
